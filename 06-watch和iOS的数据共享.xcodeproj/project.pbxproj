@@ -23,6 +23,7 @@
 		70186F501BC90C130082A71F /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70186F4F1BC90C130082A71F /* ExtensionDelegate.m */; };
 		70186F531BC90C130082A71F /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70186F521BC90C130082A71F /* NotificationController.m */; };
 		70186F551BC90C130082A71F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70186F541BC90C130082A71F /* Assets.xcassets */; };
+		70186F6E1BC910B20082A71F /* Settings-Watch.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 70186F6D1BC910B20082A71F /* Settings-Watch.bundle */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,10 @@
 		70186F521BC90C130082A71F /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
 		70186F541BC90C130082A71F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70186F561BC90C130082A71F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70186F6A1BC90C2F0082A71F /* 06-watch和iOS的数据共享 WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "06-watch和iOS的数据共享 WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		70186F6B1BC90C840082A71F /* 06-watch和iOS的数据共享.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "06-watch和iOS的数据共享.entitlements"; sourceTree = "<group>"; };
+		70186F6C1BC90ED10082A71F /* 06-watch和iOS的数据共享 WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "06-watch和iOS的数据共享 WatchKit App.entitlements"; sourceTree = "<group>"; };
+		70186F6D1BC910B20082A71F /* Settings-Watch.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "Settings-Watch.bundle"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,10 +178,12 @@
 		70186F0A1BC90C120082A71F /* 06-watch和iOS的数据共享 */ = {
 			isa = PBXGroup;
 			children = (
+				70186F6B1BC90C840082A71F /* 06-watch和iOS的数据共享.entitlements */,
 				70186F0E1BC90C120082A71F /* AppDelegate.h */,
 				70186F0F1BC90C120082A71F /* AppDelegate.m */,
 				70186F111BC90C120082A71F /* ViewController.h */,
 				70186F121BC90C120082A71F /* ViewController.m */,
+				70186F6D1BC910B20082A71F /* Settings-Watch.bundle */,
 				70186F141BC90C120082A71F /* Main.storyboard */,
 				70186F171BC90C120082A71F /* Assets.xcassets */,
 				70186F191BC90C120082A71F /* LaunchScreen.storyboard */,
@@ -215,6 +222,7 @@
 		70186F391BC90C130082A71F /* 06-watch和iOS的数据共享 WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				70186F6C1BC90ED10082A71F /* 06-watch和iOS的数据共享 WatchKit App.entitlements */,
 				70186F3A1BC90C130082A71F /* Interface.storyboard */,
 				70186F3D1BC90C130082A71F /* Assets.xcassets */,
 				70186F3F1BC90C130082A71F /* Info.plist */,
@@ -225,6 +233,7 @@
 		70186F481BC90C130082A71F /* 06-watch和iOS的数据共享 WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				70186F6A1BC90C2F0082A71F /* 06-watch和iOS的数据共享 WatchKit Extension.entitlements */,
 				70186F4B1BC90C130082A71F /* InterfaceController.h */,
 				70186F4C1BC90C130082A71F /* InterfaceController.m */,
 				70186F4E1BC90C130082A71F /* ExtensionDelegate.h */,
@@ -349,6 +358,12 @@
 				TargetAttributes = {
 					70186F071BC90C120082A71F = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = EPUU4MPFM7;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					70186F201BC90C120082A71F = {
 						CreatedOnToolsVersion = 7.0;
@@ -360,9 +375,21 @@
 					};
 					70186F341BC90C130082A71F = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = EPUU4MPFM7;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					70186F431BC90C130082A71F = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = EPUU4MPFM7;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -395,6 +422,7 @@
 			files = (
 				70186F1B1BC90C120082A71F /* LaunchScreen.storyboard in Resources */,
 				70186F181BC90C120082A71F /* Assets.xcassets in Resources */,
+				70186F6E1BC910B20082A71F /* Settings-Watch.bundle in Resources */,
 				70186F161BC90C120082A71F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,10 +633,14 @@
 		70186F5A1BC90C130082A71F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "06-watch和iOS的数据共享 WatchKit Extension/06-watch和iOS的数据共享 WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "06-watch和iOS的数据共享 WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.520it.-6-watch-iOS-----.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -619,10 +651,14 @@
 		70186F5B1BC90C130082A71F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "06-watch和iOS的数据共享 WatchKit Extension/06-watch和iOS的数据共享 WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "06-watch和iOS的数据共享 WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.520it.-6-watch-iOS-----.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -634,10 +670,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "06-watch和iOS的数据共享 WatchKit App/06-watch和iOS的数据共享 WatchKit App.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				IBSC_MODULE = "_6_watch_iOS______WatchKit_Extension";
 				INFOPLIST_FILE = "06-watch和iOS的数据共享 WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.520it.-6-watch-iOS-----.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -649,10 +689,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "06-watch和iOS的数据共享 WatchKit App/06-watch和iOS的数据共享 WatchKit App.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				IBSC_MODULE = "_6_watch_iOS______WatchKit_Extension";
 				INFOPLIST_FILE = "06-watch和iOS的数据共享 WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.520it.-6-watch-iOS-----.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -664,10 +708,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "06-watch和iOS的数据共享/06-watch和iOS的数据共享.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "06-watch和iOS的数据共享/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.520it.-6-watch-iOS-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -675,10 +723,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "06-watch和iOS的数据共享/06-watch和iOS的数据共享.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "06-watch和iOS的数据共享/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.520it.-6-watch-iOS-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -10,6 +10,7 @@
 
 
 @interface InterfaceController()
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *lab;
 
 @end
 
@@ -20,11 +21,22 @@
     [super awakeWithContext:context];
 
     // Configure interface objects here.
+    
+//    NSUserDefaults *ud = [[NSUserDefaults alloc] initWithSuiteName:@"group.xmg.extensionTest"];
+//    
+//    [ud setObject:@"222222222" forKey:@"xmgET"];
+    
+    
+    
+    
 }
 
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
+    
+    NSUserDefaults *ud = [[NSUserDefaults alloc] initWithSuiteName:@"group.xmg.extensionTest"];
+    [self.lab setText:[ud objectForKey:@"xmgET"]];
 }
 
 - (void)didDeactivate {

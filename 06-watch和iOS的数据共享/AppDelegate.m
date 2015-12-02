@@ -42,4 +42,11 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void (^)(NSDictionary * _Nullable))reply
+{
+    NSUserDefaults *ud = [[NSUserDefaults alloc] initWithSuiteName:@"group.xmg.extensionTest"];
+    
+    [ud setObject:NSStringFromClass([self class]) forKey:@"xmgET"];
+}
+
 @end

@@ -17,6 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    NSUserDefaults *ud = [[NSUserDefaults alloc] initWithSuiteName:@"group.xmg.extensionTest"];
+    
+    //[ud setObject:@"222222222" forKey:@"xmgET"];
+    //[ud synchronize];
+    NSLog(@"%@", [ud objectForKey:@"xmgET"]);
 }
 
 - (void)didReceiveMemoryWarning {
